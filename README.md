@@ -29,7 +29,8 @@ Database audit logs were reviewed and **no suspicious database activity** was id
         
         *Source evidence:* Failed password events recorded in the log. 
         linux_s_30DAY
-       ![Brute Force Threshold](https://raw.githubusercontent.com/cybertimm/SIEM-Log-Monitoring-Threat-Detection1/main/Brute%20Force%20Threshold%201.png)
+      ![Detected Brute Force](https://raw.githubusercontent.com/cybertimm/SIEM-Log-Monitoring-Threat-Detection1/main/DetectedBruteForce2.png)
+
         
 
 ### **08:41–08:49 UTC**
@@ -48,7 +49,10 @@ Database audit logs were reviewed and **no suspicious database activity** was id
         
         *Evidence:* Multiple consecutive “Failed password for root” entries. 
         linux_s_30DAY
-        
+         ![Brute Force Threshold](https://raw.githubusercontent.com/cybertimm/SIEM-Log-Monitoring-Threat-Detection1/main/Brute%20Force%20Threshold%201.png)
+
+         ![Splunk Search Screenshot](https://raw.githubusercontent.com/cybertimm/SIEM-Log-Monitoring-Threat-Detection1/main/Search%20_%20Splunk%2010.0.2%20-%20Google%20Chrome%2029_11_2025%2002_14_04.png)
+
 
 ### **10:49 UTC**
 
@@ -59,12 +63,15 @@ Database audit logs were reviewed and **no suspicious database activity** was id
         
         *Evidence:* “Accepted password” entries. 
         linux_s_30DAY
+      ![Splunk Search Screenshot](https://raw.githubusercontent.com/cybertimm/SIEM-Log-Monitoring-Threat-Detection1/main/Search%20_%20Splunk%2010.0.2%20-%20Google%20Chrome%2029_11_2025%2003_28_08.png)
+
         
 - Privilege escalation:
     - `su` session opened for `root` by `djohnson`
         
         *Evidence:* `su: pam_unix(su:session): session opened for user root`. 
         linux_s_30DAY
+
         
 
 ### **10:51–11:12 UTC**
@@ -79,7 +86,8 @@ Database audit logs were reviewed and **no suspicious database activity** was id
         
         *Evidence:* Failed SSH attempts from this IP. 
         linux_s_30DAY
-        
+        ![Detected Brute Force](https://raw.githubusercontent.com/cybertimm/SIEM-Log-Monitoring-Threat-Detection1/main/DetectedBruteForce.png)
+
 
 ### **11:03–12:58 UTC**
 
@@ -114,7 +122,8 @@ All targeted common accounts like:
     
     *Evidence:* Repeated failed login attempts across the logs. 
     linux_s_30DAY
-    
+    ![Splunk Search Screenshot](https://raw.githubusercontent.com/cybertimm/SIEM-Log-Monitoring-Threat-Detection1/main/Search%20_%20Splunk%2010.0.2%20-%20Google%20Chrome%2029_11_2025%2004_35_45.png)
+
 
 # **Threat Analysis**
 
@@ -306,5 +315,3 @@ Internal users authenticated legitimately and performed expected administrative 
 **Overall risk rating:** **Medium**
 
 No compromise occurred, but the attack volume shows the server is an active target and requires improved hardening.
-
-# Evidence Capture
