@@ -29,6 +29,7 @@ Database audit logs were reviewed and **no suspicious database activity** was id
         
         *Source evidence:* Failed password events recorded in the log. 
         linux_s_30DAY
+       ![Brute Force Threshold](https://raw.githubusercontent.com/cybertimm/SIEM-Log-Monitoring-Threat-Detection1/main/Brute%20Force%20Threshold%201.png)
         
 
 ### **08:41–08:49 UTC**
